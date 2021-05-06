@@ -1,0 +1,13 @@
+/* TODO: add styles */
+
+$base-font-size: 24px;
+$font-h1-color: rgb(255, 255, 0);
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: $base-font-size;
+}
+
+h1 {
+  color: $font-h1-color;
+}
