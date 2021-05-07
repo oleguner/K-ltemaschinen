@@ -1,5 +1,5 @@
 /* eslint no-use-before-define: 0 */
-// import * as url from '';
+import images from './Vector_colored_flipped.svg';
 
 const createPopup = () => {
   const producteBtn = document.querySelector('#prod-btn');
@@ -14,26 +14,26 @@ const createPopup = () => {
   // const peripPopup = document.getElementById('per-popup');
   // const deinstPopup = document.getElementById('dein-btn');
 
-  producteBtn.addEventListener('click', toutchPopup);
+  producteBtn.addEventListener('click', touchPopup);
 
-  peripBtn.addEventListener('click', toutchPopup);
+  peripBtn.addEventListener('click', touchPopup);
 
-  dienstBtn.addEventListener('click', toutchPopup);
+  dienstBtn.addEventListener('click', touchPopup);
 
-  function toutchPopup(clickEvent) {
+  function touchPopup(clickEvent) {
     if (clickEvent.target.id === 'prod-btn') {
-      producteIcon.style.backgroundImage = image;
+      console.dir(images);
+      producteIcon.setAttribute('src', images);
       console.log(producteIcon);
     }
     if (clickEvent.target.id === 'per-btn') {
-      peripIcon.style.backgroundImage = 'url(../images/Vector_colored_flipped.svg)';
+      // peripIcon.style.backgroundImage = `${images[fileName]}`;
       console.log(peripIcon);
     }
     if (clickEvent.target.id === 'dein-btn') {
-      dienstIcon.style.backgroundImage = 'url(../images/Vector_colored_flipped.svg)';
+      // dienstIcon.style.backgroundImage = `${images[fileName]}`;
       console.log(producteIcon);
     }
-    // console.log(clickEvent.target);
   }
 };
 
