@@ -1,3 +1,11 @@
 {
+  "rules": {
+    "selector-class-pattern": null,
+    "function-parentheses-space-inside": null,
+    "string-quotes": null,
+    "order/properties-alphabetical-order": null,
+    "max-nesting-depth": null,
+    "no-use-before-define": null
+  },
   "extends": "stylelint-config-sass-guidelines"
 }

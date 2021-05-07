@@ -1,0 +1,13 @@
+@import "./reset";
+@import "./typography";
+@import "./vars";
+@import "./mixins";
+@import "./header";
+@import "./nav";
+@import "./popup";
+
+body {
+  font-family: $main-font;
+  font-size: $main-text-size;
+  color: $text-color;
+}

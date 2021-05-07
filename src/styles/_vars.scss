@@ -1,0 +1,20 @@
+$main-margin: 121px;
+
+$main-text-size: 17px;
+$header-text-size: 48px;
+
+$border-link-width: 2px;
+
+$main-font: 'Noto Sans', sans-serif;
+$header-font: 'bbc_reith_sansmedium', sans-serif;
+
+$text-color: #45494f;
+$header-color: #1652ac;
+$active-link-color: #2e75ff;
+$gradient: linear-gradient(
+  90deg, rgba(255, 54, 58, 1) 10%,
+  rgba(138, 59, 184, 1) 60%,
+  rgba(54, 54, 255, 1) 93%
+);
+
+$transition-duration: 0.3s;

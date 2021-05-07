@@ -1,0 +1,43 @@
+.nav {
+  @include flex;
+  gap: 35px;
+
+  &__item {
+    display: inline-block;
+    position: relative;
+  }
+
+  &__link {
+    color: $text-color;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    padding: 4px 17px;
+    line-height: 20px;
+    transition: border $transition-duration ease;
+
+    &:hover {
+      border: 2px solid #eaedf5;
+      color: $active-link-color;
+      cursor: pointer;
+
+      &:hover > .nav__link-icon {
+        background-image: url('../images/Vector_colored.svg');
+      }
+    }
+
+    &-icon {
+      display: inline-block;
+      width: 12px;
+      height: 6px;
+      // background-repeat: repeat;
+      background-image: url('../images/Vector.svg');
+      // background-size: cover;
+      transform: translate(2px, -2px);
+    }
+
+    &--vector {
+      padding: 3px 13px 4px 8px;
+      background-color: #fff;
+    }
+  }
+}
