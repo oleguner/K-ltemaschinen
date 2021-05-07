@@ -1,5 +1,5 @@
 /* eslint no-use-before-define: 0 */
-import image from '../images/Vector.svg';
+// import * as url from '';
 
 const createPopup = () => {
   const producteBtn = document.querySelector('#prod-btn');
