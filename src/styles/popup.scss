@@ -1,8 +1,9 @@
 .popup {
-  // width: calc(100% - $border-link-width * 2);
+  width: calc(100% - 40px);
   position: absolute;
-  // top: 120%;
-  // left: 0%;
+  top: 120%;
+  left: 0%;
+  display: none;
   
   // border-bottom: 2px solid #eaedf5;
   // border-right: 2px solid #eaedf5;
@@ -10,10 +11,14 @@
   // border-radius: 0 0 8px 8px;
   // background-color: #fff;
 
+  &--hidden {
+    display: block;
+  }
+
   &__link {
     display: flex;
     justify-content: left;
-    padding: 19px;
+    padding: 17px;
   
     // border-bottom: $border-link-width solid #eaedf5;
     border-radius: 8px;

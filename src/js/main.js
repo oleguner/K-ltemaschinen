@@ -1,7 +1,9 @@
 /* eslint no-use-before-define: 0 */
-import images from './Vector_colored_flipped.svg';
+import flippedArrow from '../images/Vector_colored_flipped.svg';
+import arrow from '../images/Vector.svg';
 
 const createPopup = () => {
+  const popupContainer = document.querySelector('.nav__list');
   const producteBtn = document.querySelector('#prod-btn');
   const peripBtn = document.querySelector('#per-btn');
   const dienstBtn = document.querySelector('#dein-btn');
@@ -10,29 +12,26 @@ const createPopup = () => {
   const peripIcon = document.querySelector('#per-icon');
   const dienstIcon = document.querySelector('#dein-icon');
 
-  // const productePopup = document.getElementById('prod-popup');
-  // const peripPopup = document.getElementById('per-popup');
-  // const deinstPopup = document.getElementById('dein-btn');
-
-  producteBtn.addEventListener('click', touchPopup);
-
-  peripBtn.addEventListener('click', touchPopup);
-
-  dienstBtn.addEventListener('click', touchPopup);
+  popupContainer.addEventListener('click', touchPopup);
 
   function touchPopup(clickEvent) {
-    if (clickEvent.target.id === 'prod-btn') {
-      console.dir(images);
-      producteIcon.setAttribute('src', images);
-      console.log(producteIcon);
-    }
-    if (clickEvent.target.id === 'per-btn') {
-      // peripIcon.style.backgroundImage = `${images[fileName]}`;
-      console.log(peripIcon);
-    }
-    if (clickEvent.target.id === 'dein-btn') {
-      // dienstIcon.style.backgroundImage = `${images[fileName]}`;
-      console.log(producteIcon);
+    const isArrow = clickEvent.target.innerHTML.includes('img');
+    if (clickEvent.target.closest('.nav__link--vector') || isArrow) {
+      const target = clickEvent.target.tagName === 'IMG'
+      ? clickEvent.target.closest('div') : clickEvent.target;
+      const img = target.firstElementChild || clickEvent.target;
+      const setArrow = img.getAttribute('src').includes('flipped')
+        ? arrow : flippedArrow;
+      console.log(img);
+
+      img.setAttribute('src', setArrow);
+
+      if (target === producteBtn
+        || target === peripBtn
+        || target === dienstBtn
+      ) {
+        target.lastElementChild.classList.toggle('popup--hidden');
+      }
     }
   }
 };
