@@ -1,0 +1,30 @@
+.burger {
+  width: 23px;
+  height: 18px;
+  cursor: pointer;
+
+  display: none;
+  position: relative;
+
+  &__middle,
+  &__top,
+  &__bottom {
+    width: 21px;
+    height: 3px;
+    background-color: #c4c4c4;
+    border-radius: 1px;
+    transform-origin: 40%;
+  }
+
+  &__middle {
+    position: relative;
+    margin: 3px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .burger {
+    display: block;
+    margin-right: 21px;
+  }
+}

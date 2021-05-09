@@ -1,7 +1,22 @@
 .header {
   @include flex-space-around;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
 
   height: 42px;
   max-width: 1442px;
+
+  &__logo-wrapper {
+    user-select: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    justify-content: space-between;
+
+    &__logo-wrapper {
+      margin-left: 21px;
+    }
+  }
 }
