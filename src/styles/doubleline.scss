@@ -1,3 +1,107 @@
 .doubleline {
+  overflow: hidden;
+
+  &__wrapper {
+    @include flex;
+
+    margin: 91px 0;
+  }
+
+  &__info {
+    @include flex;
+
+    margin-left: $main-margin;
+    align-items: start;
+    flex-direction: column;
+    width: 50%;
+  }
+
+  &__title {
+    text-align: left;
+    font-family: $header-font;
+    font-weight: 700;
+    line-height: 40px;
+    font-size: 20px;
+    letter-spacing: 2.42px;
+    color: $header-color;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    width: 510px;
+
+    font-weight: 400;
+    line-height: 32px;
+    margin-top: 30px;
+  }
+
+  &__lines {
+    width: 66%;
+  }
+
+  &__image {
+    position: relative;
+    right: -50px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .doubleline {
+    &__info {
+      margin-left: 200px;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .doubleline {
+    &__wrapper {
+      flex-direction: column-reverse;
   
+    }
+
+    &__image {
+      transform: translateY(-90px);
+      left: calc(40% - 719px / 2);
+    }
+
+    &__info {
+      margin: -70px 12% 0;
+      width: 76%;
+    }
+
+    &__text {
+      font-style: italic;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .doubleline {
+      &__text {
+        width: 400px;
+      }
+
+      &__info {
+        width: 100%;
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 500px) {
+    .doubleline {
+      &__title,
+      &__text {
+        font-size: 18px;
+        width: 342px;
+        text-align: center;
+        align-self: center;
+      }
+
+      &__text {
+        font-size: 16px;
+        text-align: left;
+      }
+    }
+  }
 }

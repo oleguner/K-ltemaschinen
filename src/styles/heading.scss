@@ -1,5 +1,6 @@
 .heading {
   max-width: $max-width;
+  overflow: hidden;
 
   &__wrapper {
     @include flex-space-around;
