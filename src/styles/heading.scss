@@ -59,6 +59,7 @@
     &__photo {
       width: 550px;
       transform: translateY(-40px);
+      z-index: -20;
     }
   }
 }
@@ -81,7 +82,7 @@
   }
 }
 
-@media screen and (max-width: 899px) {
+@media screen and (max-width: 900px) {
   .heading {
     &__wrapper {
       margin: 80px 12.5% 0;
@@ -102,9 +103,8 @@
     }
 
     &__photo {
-      height: 300px;
       transform: translateY(-40px);
-      width: 350px;
+      width: 425px;
     }
   }
 }
@@ -125,7 +125,7 @@
     }
 
     &__text {
-      transform: translateY(275px);
+      transform: translateY(330px);
     }
 
     &__line {
@@ -163,6 +163,10 @@
     &__text {
       width: 340px;
     }
+
+    &__wrapper {
+      margin-bottom: 40px;
+    }
   }
 }
 
@@ -170,6 +174,10 @@
   .heading {
     &__title {
       font-size: 28px;
+    }
+
+    &__photo {
+      transform: translateY(-215px);
     }
 
     &__text {
