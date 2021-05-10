@@ -1,0 +1,34 @@
+.energy {
+  @include flex-space-around;
+  max-width: $max-width;
+  justify-content: flex-start;
+
+  &__wrapper {
+
+  }
+
+  &__photo {
+    height: 477px;
+    width: 700px;
+    object-fit: cover;
+    margin: 58px 50px 0 0;
+  }
+
+  &__title {
+    font-family: $header-font;
+    color: $active-link-color;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 2.42px;
+    margin-bottom: 23px;
+  }
+
+  &__text {
+    line-height: 32px;
+    max-width: 477px;
+
+    &--bold {
+      font-weight: 700;
+    }
+  }
+}

@@ -76,7 +76,7 @@ export function toggleBurger() {
   const burgerBtn = document.querySelector('.burger');
   const navDiv = document.querySelector('.nav');
 
-  burgerBtn.addEventListener('click', (e) => {
+  burgerBtn.addEventListener('click', () => {
     const topBar = document.querySelector('.burger__top');
     const midBar = document.querySelector('.burger__middle');
     const bottomBar = document.querySelector('.burger__bottom');

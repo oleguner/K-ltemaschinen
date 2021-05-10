@@ -4,7 +4,7 @@
   position: relative;
 
   height: 42px;
-  max-width: 1442px;
+  max-width: $max-width;
 
   &__logo-wrapper {
     user-select: none;

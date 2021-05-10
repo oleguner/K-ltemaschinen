@@ -1,11 +1,13 @@
 @import "./reset";
 @import "./typography";
 @import "./vars";
-@import "./mixins";
+@import "./_mixins";
 @import "./header";
 @import "./nav";
 @import "./popup";
 @import "./burger";
+@import "./heading";
+@import "./energy";
 
 body {
   font-family: $main-font;

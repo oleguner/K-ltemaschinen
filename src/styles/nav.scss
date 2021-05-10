@@ -1,6 +1,7 @@
 .nav {
   position: relative;
   user-select: none;
+  letter-spacing: -0.32px;
 
   .nav__list {
     position: relative;
@@ -49,7 +50,15 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
+  .nav {
+    &__link {
+      padding: 4px 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
   .nav {
     position: absolute;
     display: none;
@@ -59,7 +68,6 @@
     &__list {
       display: flex;
       flex-direction: column;
-      // flex-wrap: wrap;
       justify-content: center;
       align-items: flex-start;
 
