@@ -82,15 +82,22 @@
   .energy {
     &__photo {
       height: 250px;
-      width: 500px;
+      width: 400px;
       top: -10px;
-      left: calc(50% - 250px);
+      left: calc(50% - 200px);
     }
 
     &__text {
       width: 100%;
       margin-left: calc(50% - 100% / 2);
     }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  &__photo {
+    width: 320px;
+    left: calc(50% - 160px);
   }
 }
 
