@@ -1,0 +1,102 @@
+.slider {
+  @include flex;
+  flex-direction: column;
+
+  max-width: $max-width;
+
+  background-color: #fbfbfc;
+
+  &__title {
+    margin: 74px 0 31px;
+    font-family: $header-font;
+    font-weight: 500;
+    font-size: 28px;
+    letter-spacing: 4.42px;
+    line-height: 40px;
+  }
+
+  &__control {
+    display: flex;
+    justify-content: flex-start;
+    margin: 29px 0 78px;
+    position: relative;
+    left: -101px;
+  }
+
+  &__left-btn,
+  &__right-btn {
+    width: 126px;
+    height: 78px;
+    margin-right: 18px;
+
+    background-color: #fff;
+    color: #336ad5;
+    border: 0;
+    box-shadow: 0 0 21px rgba(64, 68, 75, 0.14);
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 64px;
+
+    &:hover {
+      background-color: #d0dddf;
+    }
+  }
+
+  &__radio-wrapper {
+    @include flex;
+    align-items: start;
+  }
+
+  &__radio-btn {
+    width: 12px;
+    height: 12px;
+    margin-right: 26px;
+
+    background-color: #d0dddf;
+    border: 1px solid #a3bbe0;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+
+  &__photo {
+    opacity: 1;
+    transition: all 1s;
+    border-radius: 12px;
+  }
+
+  .fadeOut {
+    opacity: 0.3;
+    transition: all 1s;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .slider {
+    &__photo {
+      max-width: 99vw;
+    }
+
+    &__left-btn,
+    &__right-btn {
+      display: none;
+    }
+
+    &__control {
+      position: static;
+    }
+
+    &__radio-btn {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .slider {
+      &__photo {
+        width: 90vw;
+      }
+    }
+  }
+  
+}
