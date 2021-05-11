@@ -1,0 +1,129 @@
+.benefits {
+  @include flex;
+
+  max-width: $max-width;
+
+  background-color: #fbfbfc;
+
+  &__wrapper {
+    @include flex;
+    flex-direction: column;
+    width: 1200px;
+
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 16px;
+  }
+
+  &__title {
+    margin: 43px 0 71px;
+    font-family: $header-font;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 4.42px;
+    color: #020303;
+  }
+
+  &__list-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+  }
+
+  &__text--bold {
+    font-weight: 900;
+  }
+
+  &__right-col,
+  &__left-col {
+    width: 490px;
+    position: relative;
+
+    line-height: 35.5px;
+    letter-spacing: -0.4px;
+
+  }
+
+  &__left-col {
+    margin-left: 60px;
+  }
+
+  &__text {
+    margin-top: 40px;
+  }
+
+  @for $i from 1 through 8 {
+    &__left-col &__text:nth-child(#{$i})::before {
+      content: '#{map-get($numbers, $i)}';
+      position: absolute;
+      left: -40px;
+    }
+  }
+
+  @for $i from 1 through 14 {
+    &__right-col &__text:nth-child(#{$i})::before {
+      content: '#{map-get($numbers, $i + 7)}';
+      position: absolute;
+      left: -40px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .benefits {
+    &__right-col,
+    &__left-col {
+      width: 390px;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .benefits {
+    &__right-col,
+    &__left-col {
+      width: 290px;
+    }
+
+    &__right-col {
+      margin: 0;
+      margin-left: 60px;
+    }
+
+    &__list-wrapper {
+      gap: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .benefits {
+    &__list-wrapper {
+      flex-direction: column;
+    }
+
+    &__right-col,
+    &__left-col {
+      width: 490px;
+    }
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .benefits {
+    &__right-col,
+    &__left-col {
+      width: 390px;
+    }
+  }
+}
+
+@media screen and (max-width: 499px) {
+  .benefits {
+    &__right-col,
+    &__left-col {
+      width: 290px;
+    }
+  }
+}

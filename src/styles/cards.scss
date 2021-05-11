@@ -8,13 +8,12 @@
 
   &__wrapper {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 9px;
 
     width: 83.2%;
-
+    margin-bottom: 57px;
   }
 
   &__title {
@@ -28,10 +27,12 @@
 
   &__item {
     @include flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
-    width: 368px;
+    // width: 394px;
+    width: 380px;
     height: 136px;
+    margin-top: 9px;
 
     background-color: #fff;
     border-radius: 16px;
@@ -58,7 +59,12 @@
   .cards {
     &__wrapper {
       justify-content: center;
+      gap: 8px;
     }
+
+    // &__item {
+      
+    // }
   }
 }
 
