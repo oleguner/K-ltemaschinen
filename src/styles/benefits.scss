@@ -2,6 +2,7 @@
   @include flex;
 
   max-width: $max-width;
+  overflow: hidden;
 
   background-color: #fbfbfc;
 
@@ -121,6 +122,10 @@
 
 @media screen and (max-width: 499px) {
   .benefits {
+    &__title {
+      font-size: 26px;
+    }
+
     &__right-col,
     &__left-col {
       width: 290px;
