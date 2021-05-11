@@ -5,6 +5,7 @@ import arrow from '../images/Vector.svg';
 
 export default function createPopup() {
   const popupContainer = document.querySelector('.nav__list');
+  const heading = document.querySelector('.heading__wrapper');
 
   const buttonStore = [
     document.querySelector('#prod-btn'),
@@ -13,23 +14,29 @@ export default function createPopup() {
   ];
 
   let isPopupOpen = false;
-  if (!isPopupOpen) {
-    popupContainer.addEventListener('click', touchPopup);
 
-    popupContainer.addEventListener('mouseover', (overEvent) => {
-      if (overEvent.target.tagName === 'DIV' && !isPopupOpen) {
-        overEvent.target.firstElementChild.setAttribute('src', coloredArrow);
-      } else if (overEvent.target.tagName === 'IMG' && !isPopupOpen) {
-        overEvent.target.setAttribute('src', coloredArrow);
-      }
-    });
+  popupContainer.addEventListener('click', touchPopup);
 
-    popupContainer.addEventListener('mouseout', (outEvent) => {
-      if (outEvent.target.tagName === 'DIV' && !isPopupOpen) {
-        outEvent.target.firstElementChild.setAttribute('src', arrow);
-      }
+  heading.addEventListener('click', () => {
+    buttonStore.forEach((btn) => {
+      btn.lastElementChild.classList.remove('popup--hidden');
+      btn.firstElementChild.setAttribute('src', arrow);
     });
-  }
+  });
+
+  popupContainer.addEventListener('mouseover', (overEvent) => {
+    if (overEvent.target.tagName === 'DIV' && !isPopupOpen) {
+      overEvent.target.firstElementChild.setAttribute('src', coloredArrow);
+    } else if (overEvent.target.tagName === 'IMG' && !isPopupOpen) {
+      overEvent.target.setAttribute('src', coloredArrow);
+    }
+  });
+
+  popupContainer.addEventListener('mouseout', (outEvent) => {
+    if (outEvent.target.tagName === 'DIV' && !isPopupOpen) {
+      outEvent.target.firstElementChild.setAttribute('src', arrow);
+    }
+  });
 
   let prevClick = null;
 

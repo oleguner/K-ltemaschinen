@@ -22,3 +22,7 @@ body {
   font-size: $main-text-size;
   color: $text-color;
 }
+
+html {
+  scroll-behavior: smooth;
+}

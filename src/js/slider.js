@@ -9,7 +9,6 @@ export default function handleSlider() {
   const radioWrap = document.querySelector('.slider__radio-wrapper');
 
   const imageContainer = document.querySelector('.slider__photo');
-  const imgDuration = 2000;
 
   const radioBtns = document.querySelectorAll('.slider__radio-btn');
   let i = 0;
@@ -67,10 +66,11 @@ export default function handleSlider() {
   }
 
   function slideShow() {
-    imageContainer.className += 'fadeOut';
+    imageContainer.className += ' fadeOut';
     setTimeout(() => {
       imageContainer.src = images[i];
-      imageContainer.className = '';
-    }, 300);
+      imageContainer.style.borderRadius = '12px';
+      imageContainer.className = 'slider__photo';
+    }, 500);
   }
 }

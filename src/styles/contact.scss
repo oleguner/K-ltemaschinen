@@ -3,6 +3,7 @@
   flex-direction: column;
 
   max-width: $max-width;
+  scroll-behavior: smooth;
 
   &__wrapper {
     @include flex;
