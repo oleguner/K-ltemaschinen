@@ -1,0 +1,80 @@
+.buttons {
+  @include flex;
+  flex-direction: column;
+
+  max-width: $max-width;
+
+  &__title {
+    margin: 78px 0 31px;
+    font-family: $header-font;
+    font-weight: 500;
+    font-size: 28px;
+    line-height: 40px;
+    letter-spacing: 2.42px;
+    color: #020303;
+  }
+
+  &__wrapper {
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-bottom: 82px;
+    max-width: 1200px;
+  }
+
+  &__item {
+    width: 385px;
+    margin: 4px;
+
+    background-color: #0651c3;
+    border: 0;
+    border-radius: 8px;
+    font-weight: 500;
+    line-height: 40px;
+    letter-spacing: 1.42px;
+    color: #fafbfe;
+    font-family: $header-font;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      background: linear-gradient(
+        180deg, #0c5cd6 0%,
+        rgba(0, 56, 140, 0) 100%), #004fc7;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .buttons {
+      &__wrapper {
+        justify-content: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    .buttons {
+      &__title {
+        font-size: 24px;
+        text-align: center;
+      }
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .buttons {
+      &__title {
+        margin-bottom: 0;
+      }
+
+      &__wrapper {
+        margin-top: 0;
+      }
+
+      &__item {
+        width: 300px;
+      }
+    }
+  }
+}
